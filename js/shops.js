@@ -16,7 +16,8 @@ window.KAIYANG_FOOD_MAP = {
     dateText: "贵州",
     heroImage: "assets/images/article-cover.jpg",
     shareImage: "assets/images/share-thumb.jpg",
-    shareDesc: "爽爽贵阳 硒养开阳，点击封面进入开阳特色美食图鉴。"
+    shareDesc: "爽爽贵阳 硒养开阳，点击封面进入开阳特色美食图鉴。",
+    canonicalUrl: "https://kai-yang-mei-shi.onrender.com/"
   },
   shops: [
     {

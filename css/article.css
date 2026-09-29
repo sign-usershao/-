@@ -61,6 +61,14 @@ body {
   vertical-align: top;
 }
 
+.wx-share-img {
+  position: absolute;
+  left: -600px;
+  top: 0;
+  width: 400px;
+  height: 400px;
+}
+
 @media (min-width: 768px) {
   body {
     background: #ededed;

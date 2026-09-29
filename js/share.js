@@ -1,22 +1,13 @@
 (function () {
+  var ORIGIN = "https://kai-yang-mei-shi.onrender.com";
   var data = window.KAIYANG_FOOD_MAP;
   var article = (data && data.article) || {};
   var TITLE =
     article.title || "开阳特色美食地图来啦！快和你的“饭搭子”去打卡吧";
   var DESC =
     article.shareDesc || "爽爽贵阳 硒养开阳，点击封面进入开阳特色美食图鉴。";
-  var thumb = article.shareImage || "assets/images/share-thumb.jpg";
-
-  function abs(path) {
-    try {
-      return new URL(path, window.location.href).href;
-    } catch (e) {
-      return path;
-    }
-  }
-
-  var image = abs(thumb);
-  var url = window.location.href.split("#")[0];
+  var url = article.canonicalUrl || ORIGIN + "/";
+  var image = ORIGIN + "/assets/images/share-thumb.jpg";
 
   document.title = TITLE;
 
