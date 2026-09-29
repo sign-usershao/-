@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1334" width="750" height="1334">
+
+  <defs>
+    <linearGradient id="s13" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6b3a2a"/>
+      <stop offset="100%" stop-color="#1a120c"/>
+    </linearGradient>
+  </defs>
+  <rect width="750" height="1334" fill="url(#s13)"/>
+  <circle cx="560" cy="260" r="140" fill="#e6b17a" opacity="0.22"/>
+  <circle cx="180" cy="980" r="180" fill="#e6b17a" opacity="0.12"/>
+  <text x="375" y="560" text-anchor="middle" fill="#fff8e8" font-size="36" font-family="Microsoft YaHei, sans-serif">李建平腊味馆</text>
+  <text x="375" y="620" text-anchor="middle" fill="#e7c56a" font-size="22" font-family="Microsoft YaHei, sans-serif">腊味火锅</text>
+  <text x="375" y="700" text-anchor="middle" fill="#f3e0a6" font-size="14" font-family="Microsoft YaHei, sans-serif">美食图片占位 · 编号 13</text>
+
+</svg>

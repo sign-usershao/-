@@ -1,0 +1,74 @@
+:root {
+  --ink: #000;
+  --muted: #8c8c8c;
+  --link: #576b95;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: #fff;
+  color: var(--ink);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wx-article {
+  width: 100%;
+  max-width: 677px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+  background: #fff;
+}
+
+.wx-article h1 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+  letter-spacing: 0.01em;
+}
+
+.wx-meta-line {
+  margin: 12px 0 18px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.wx-account-name {
+  color: var(--link);
+  margin-right: 10px;
+}
+
+.wx-cover-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wx-cover-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #ededed;
+    padding: 24px 0;
+  }
+
+  .wx-article {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.06);
+    min-height: 80vh;
+  }
+}

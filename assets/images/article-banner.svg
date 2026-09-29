@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420" width="750" height="420">
+
+  <rect width="750" height="420" fill="#1d4634"/>
+  <circle cx="120" cy="80" r="70" fill="#e7c56a" opacity="0.2"/>
+  <circle cx="640" cy="340" r="90" fill="#c45c26" opacity="0.25"/>
+  <text x="375" y="190" text-anchor="middle" fill="#f7ecd7" font-size="30" font-family="Microsoft YaHei, sans-serif">把开阳的味道收进一张地图</text>
+  <text x="375" y="240" text-anchor="middle" fill="#e7c56a" font-size="16" font-family="Microsoft YaHei, sans-serif">配图占位 · 可替换为夜市 / 粉面 / 鱼火锅实拍</text>
+
+</svg>

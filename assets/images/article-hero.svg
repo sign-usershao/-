@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1000" width="750" height="1000">
+
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16382b"/>
+      <stop offset="55%" stop-color="#2f6a4f"/>
+      <stop offset="100%" stop-color="#c45c26"/>
+    </linearGradient>
+  </defs>
+  <rect width="750" height="1000" fill="url(#g)"/>
+  <circle cx="560" cy="180" r="90" fill="#e7c56a" opacity="0.28"/>
+  <path d="M0 720 C140 640 240 780 390 700 C540 620 620 760 750 690 L750 1000 L0 1000 Z" fill="#102018" opacity="0.55"/>
+  <text x="375" y="430" text-anchor="middle" fill="#f7ecd7" font-size="42" font-family="Microsoft YaHei, sans-serif">爽爽贵阳 硒味开阳</text>
+  <text x="375" y="500" text-anchor="middle" fill="#e7c56a" font-size="28" font-family="Microsoft YaHei, sans-serif" letter-spacing="8">开阳十大美食地图</text>
+  <text x="375" y="560" text-anchor="middle" fill="#f3e0a6" font-size="16" font-family="Microsoft YaHei, sans-serif">宣传主图占位 · 请替换为客户海报</text>
+
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1334" width="750" height="1334">
+
+  <rect width="750" height="1334" fill="#0f241c"/>
+  <path d="M180 220 C260 180 360 190 430 230 C530 190 640 250 670 360 C700 470 660 560 690 650 C720 760 640 860 600 960 C540 1100 420 1160 300 1120 C180 1080 140 960 130 820 C118 680 90 540 130 420 C150 330 120 250 180 220 Z" fill="#2a6a4e"/>
+  <path d="M180 220 C260 180 360 190 430 230 C530 190 640 250 670 360 C700 470 660 560 690 650 C720 760 640 860 600 960 C540 1100 420 1160 300 1120 C180 1080 140 960 130 820 C118 680 90 540 130 420 C150 330 120 250 180 220 Z" fill="none" stroke="#e7c56a" stroke-width="4" opacity="0.7"/>
+  <circle cx="390" cy="620" r="8" fill="#e7c56a"/>
+  <text x="375" y="160" text-anchor="middle" fill="#f3e0a6" font-size="22" font-family="Microsoft YaHei, sans-serif">开阳县美食地图（占位）</text>
+  <text x="375" y="1260" text-anchor="middle" fill="#d9c07a" font-size="14" font-family="Microsoft YaHei, sans-serif">请替换为客户提供的地图图片</text>
+  <text x="410" y="610" fill="#fff8e8" font-size="14" font-family="Microsoft YaHei, sans-serif">开阳</text>
+
+</svg>
