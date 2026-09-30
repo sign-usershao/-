@@ -32,10 +32,17 @@ def sample(img, left, top, width, height):
 
 
 def blend_fill(img, mask, color):
-    m = cv2.GaussianBlur(mask, (51, 51), 0).astype(np.float32) / 255.0
+    m = cv2.GaussianBlur(mask, (21, 21), 0).astype(np.float32) / 255.0
     color_img = np.full_like(img, color, dtype=np.float32)
     out = img.astype(np.float32) * (1.0 - m[..., None]) + color_img * m[..., None]
     return np.clip(out, 0, 255).astype(np.uint8)
+
+
+def protect_header(mask, img, height=16.4):
+    """Keep the Kai Yang / 开阳 title row out of card fill."""
+    h, w = img.shape[:2]
+    y2 = int(height / 100.0 * h)
+    mask[0:y2, :] = 0
 
 
 def process(src_name, out_name, titles=None, dishes=None, cards=None, paper=None, mapc=None):
@@ -61,8 +68,9 @@ def process(src_name, out_name, titles=None, dishes=None, cards=None, paper=None
     if cards:
         mask = np.zeros(img.shape[:2], np.uint8)
         for c in cards:
-            x1, y1, x2, y2 = box(img, *c[:4], pad=0.8)
+            x1, y1, x2, y2 = box(img, *c[:4], pad=0.2)
             fill_roundrect(mask, x1, y1, x2, y2)
+        protect_header(mask, img)
         out = blend_fill(out, mask, paper_color)
     dest = os.path.join(DEST, out_name)
     cv2.imwrite(dest, out, [int(cv2.IMWRITE_JPEG_QUALITY), 93])
@@ -115,12 +123,12 @@ cover_dishes = [
 
 pages = [
     ("01.jpg", "01-bg.jpg", {"titles": cover_titles, "dishes": cover_dishes, "paper": (86, 1, 12, 6), "mapc": (38, 60, 8, 4)}),
-    ("02.jpg", "02-bg.jpg", {"cards": [(3.2, 15.0, 93.6, 28.0), (3.0, 40.8, 94.0, 29.0), (3.0, 68.4, 94.0, 30.2)], "paper": (88, 48, 10, 18)}),
-    ("03.jpg", "03-bg.jpg", {"cards": [(3.0, 13.8, 94.0, 28.8), (3.0, 40.6, 94.0, 29.0), (3.0, 67.8, 94.0, 31.0)], "paper": (88, 48, 10, 18)}),
-    ("04.jpg", "04-bg.jpg", {"cards": [(3.0, 12.0, 94.0, 29.0), (3.0, 38.8, 94.0, 29.8), (3.0, 66.6, 94.0, 32.4)], "paper": (88, 48, 10, 18)}),
-    ("05.jpg", "05-bg.jpg", {"cards": [(2.4, 6.6, 95.2, 31.2), (2.4, 35.4, 95.2, 31.8), (2.4, 64.8, 95.2, 34.4)], "paper": (88, 48, 10, 18)}),
-    ("06.jpg", "06-bg.jpg", {"cards": [(3.0, 14.0, 94.0, 28.6), (3.0, 40.2, 94.0, 29.2), (3.0, 67.0, 94.0, 32.2)], "paper": (88, 48, 10, 18)}),
-    ("07.jpg", "07-bg.jpg", {"cards": [(3.0, 13.6, 94.0, 28.8), (3.0, 40.0, 94.0, 29.4), (3.0, 67.0, 94.0, 32.2)], "paper": (88, 48, 10, 18)}),
+    ("02.jpg", "02-bg.jpg", {"cards": [(5.0, 16.8, 90.0, 25.4), (4.5, 42.0, 91.0, 26.6), (4.5, 69.4, 91.0, 28.4)], "paper": (88, 48, 10, 18)}),
+    ("03.jpg", "03-bg.jpg", {"cards": [(4.5, 16.4, 91.0, 26.0), (4.5, 42.2, 91.0, 26.6), (4.5, 69.0, 91.0, 29.2)], "paper": (88, 48, 10, 18)}),
+    ("04.jpg", "04-bg.jpg", {"cards": [(4.5, 16.2, 91.0, 25.4), (4.5, 40.4, 91.0, 26.8), (4.5, 67.8, 91.0, 30.4)], "paper": (88, 48, 10, 18)}),
+    ("05.jpg", "05-bg.jpg", {"cards": [(4.0, 16.2, 92.0, 21.8), (3.8, 37.4, 92.4, 28.0), (3.8, 66.0, 92.4, 32.4)], "paper": (88, 48, 10, 18)}),
+    ("06.jpg", "06-bg.jpg", {"cards": [(4.5, 16.6, 91.0, 25.6), (4.5, 42.0, 91.0, 26.4), (4.5, 68.4, 91.0, 29.8)], "paper": (88, 48, 10, 18)}),
+    ("07.jpg", "07-bg.jpg", {"cards": [(4.5, 16.4, 91.0, 25.8), (4.5, 41.6, 91.0, 26.6), (4.5, 68.4, 91.0, 29.8)], "paper": (88, 48, 10, 18)}),
 ]
 
 for name, out, spec in pages:
