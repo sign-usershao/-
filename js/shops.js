@@ -226,8 +226,8 @@ window.KAIYANG_FOOD_MAP = {
    */
   posterPages: [
     {
-      image: "assets/images/pages/01.jpg?v=0930d",
-      bgImage: "assets/images/pages/01-bg.jpg?v=0930d",
+      image: "assets/images/pages/01.jpg?v=0930e",
+      bgImage: "assets/images/pages/01-bg.jpg?v=0930e",
       staticPieces: [],
       titlePieces: [
         { left: 6, top: 2.6, width: 88, height: 17.6, delay: 0 },
@@ -256,8 +256,8 @@ window.KAIYANG_FOOD_MAP = {
       cardPieces: []
     },
     {
-      image: "assets/images/pages/02.jpg?v=0930d",
-      bgImage: "assets/images/pages/02-bg.jpg?v=0930d",
+      image: "assets/images/pages/02.jpg?v=0930e",
+      bgImage: "assets/images/pages/02-bg.jpg?v=0930e",
       hotspots: [
         { shopId: 1, left: 48, top: 33.2, width: 42, height: 7 },
         { shopId: 2, left: 7, top: 58.8, width: 40, height: 7 },
@@ -273,8 +273,8 @@ window.KAIYANG_FOOD_MAP = {
       ]
     },
     {
-      image: "assets/images/pages/03.jpg?v=0930d",
-      bgImage: "assets/images/pages/03-bg.jpg?v=0930d",
+      image: "assets/images/pages/03.jpg?v=0930e",
+      bgImage: "assets/images/pages/03-bg.jpg?v=0930e",
       hotspots: [
         { shopId: 4, left: 48, top: 31.2, width: 42, height: 7 },
         { shopId: 5, left: 7, top: 56.8, width: 40, height: 7 },
@@ -290,8 +290,8 @@ window.KAIYANG_FOOD_MAP = {
       ]
     },
     {
-      image: "assets/images/pages/04.jpg?v=0930d",
-      bgImage: "assets/images/pages/04-bg.jpg?v=0930d",
+      image: "assets/images/pages/04.jpg?v=0930e",
+      bgImage: "assets/images/pages/04-bg.jpg?v=0930e",
       hotspots: [
         { shopId: 7, left: 47, top: 26.2, width: 43, height: 7 },
         { shopId: 8, left: 7, top: 56.2, width: 40, height: 7.2 },
@@ -307,8 +307,8 @@ window.KAIYANG_FOOD_MAP = {
       ]
     },
     {
-      image: "assets/images/pages/05.jpg?v=0930d",
-      bgImage: "assets/images/pages/05-bg.jpg?v=0930d",
+      image: "assets/images/pages/05.jpg?v=0930e",
+      bgImage: "assets/images/pages/05-bg.jpg?v=0930e",
       hotspots: [
         { shopId: 10, left: 50, top: 26.5, width: 42, height: 7.5 },
         { shopId: 11, left: 50, top: 54.2, width: 42, height: 7.5 },
@@ -324,8 +324,8 @@ window.KAIYANG_FOOD_MAP = {
       ]
     },
     {
-      image: "assets/images/pages/06.jpg?v=0930d",
-      bgImage: "assets/images/pages/06-bg.jpg?v=0930d",
+      image: "assets/images/pages/06.jpg?v=0930e",
+      bgImage: "assets/images/pages/06-bg.jpg?v=0930e",
       hotspots: [
         { shopId: 13, left: 48, top: 28.5, width: 42, height: 7.2 },
         { shopId: 14, left: 7, top: 55.8, width: 40, height: 7.2 },
@@ -341,8 +341,8 @@ window.KAIYANG_FOOD_MAP = {
       ]
     },
     {
-      image: "assets/images/pages/07.jpg?v=0930d",
-      bgImage: "assets/images/pages/07-bg.jpg?v=0930d",
+      image: "assets/images/pages/07.jpg?v=0930e",
+      bgImage: "assets/images/pages/07-bg.jpg?v=0930e",
       hotspots: [
         { shopId: 16, left: 48, top: 28.2, width: 42, height: 7.2 },
         { shopId: 17, left: 7, top: 55.5, width: 40, height: 7.2 },
