@@ -466,6 +466,96 @@ body {
   -webkit-user-drag: none;
 }
 
+.poster__layers {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.piece {
+  position: absolute;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-origin: center center;
+}
+
+.piece__img {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.piece--enter {
+  z-index: 3;
+  opacity: 0;
+  transform: scale(0.08);
+}
+
+.piece--title {
+  border-radius: 18px;
+}
+
+.piece--card {
+  border-radius: 40px;
+}
+
+.piece--dish {
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.slide.is-active .piece--title {
+  animation: popGrow 0.82s cubic-bezier(0.22, 1.35, 0.32, 1) both;
+}
+
+.slide.is-active .piece--card {
+  animation: popGrow 0.92s cubic-bezier(0.22, 1.4, 0.28, 1) both;
+}
+
+.slide.is-active .piece--dish {
+  animation: dishGrow 0.78s cubic-bezier(0.2, 1.45, 0.32, 1) both;
+}
+
+@keyframes popGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0.08);
+  }
+  58% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  78% {
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dishGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0.06) rotate(-8deg);
+  }
+  62% {
+    opacity: 1;
+    transform: scale(1.16) rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+html.debug-hotspots .piece--enter {
+  outline: 2px solid rgba(30, 120, 80, 0.85);
+}
+
 .hotspot {
   position: absolute;
   z-index: 5;

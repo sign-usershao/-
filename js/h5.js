@@ -53,9 +53,58 @@
     );
   }
 
+  function pieceHtml(src, piece, cls) {
+    var delay = piece.delay || 0;
+    var w = piece.width || 1;
+    var h = piece.height || 1;
+    return (
+      '<div class="piece ' +
+      cls +
+      '" style="left:' +
+      piece.left +
+      "%;top:" +
+      piece.top +
+      "%;width:" +
+      piece.width +
+      "%;height:" +
+      piece.height +
+      "%;animation-delay:" +
+      delay +
+      's">' +
+      '<img class="piece__img" src="' +
+      escapeHtml(src) +
+      '" alt="" style="width:' +
+      10000 / w +
+      "%;height:" +
+      10000 / h +
+      "%;left:" +
+      (-100 * piece.left) / w +
+      "%;top:" +
+      (-100 * piece.top) / h +
+      '%;">' +
+      "</div>"
+    );
+  }
+
+  function layersHtml(page) {
+    var src = page.image;
+    var html = "";
+    (page.titlePieces || []).forEach(function (p) {
+      html += pieceHtml(src, p, "piece--enter piece--title");
+    });
+    (page.dishPieces || []).forEach(function (p) {
+      html += pieceHtml(src, p, "piece--enter piece--dish");
+    });
+    (page.cardPieces || []).forEach(function (p) {
+      html += pieceHtml(src, p, "piece--enter piece--card");
+    });
+    return html;
+  }
+
   function posterSlide(page, index) {
     var spots = (page.hotspots || []).map(hotspotHtml).join("");
     var active = index === 0 ? " is-active" : "";
+    var bg = page.bgImage || page.image;
     return (
       '<section class="slide poster' +
       active +
@@ -64,10 +113,13 @@
       '">' +
       '<div class="poster__frame">' +
       '<img class="poster__img" src="' +
-      escapeHtml(page.image) +
+      escapeHtml(bg) +
       '" alt="开阳美食图鉴 ' +
       (index + 1) +
       '" />' +
+      '<div class="poster__layers">' +
+      layersHtml(page) +
+      "</div>" +
       spots +
       "</div></section>"
     );
@@ -109,6 +161,13 @@
 
   bindPosterFit();
   window.addEventListener("resize", fitPosterFrames);
+  requestAnimationFrame(function () {
+    var first = document.querySelector(".slide.poster");
+    if (!first) return;
+    first.classList.remove("is-active");
+    void first.offsetWidth;
+    first.classList.add("is-active");
+  });
   if (/[?&]debug=1/.test(location.search)) {
     document.documentElement.classList.add("debug-hotspots");
   }
@@ -120,7 +179,14 @@
     var h = slides.clientHeight;
     var idx = Math.round(top / h);
     slideEls.forEach(function (el, i) {
-      el.classList.toggle("is-active", i === idx);
+      var on = i === idx;
+      if (on) {
+        if (!el.classList.contains("is-active")) {
+          el.classList.add("is-active");
+        }
+      } else {
+        el.classList.remove("is-active");
+      }
     });
     if (hint) {
       hint.classList.toggle("is-hidden", idx >= slideEls.length - 1);

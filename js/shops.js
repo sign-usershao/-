@@ -226,55 +226,135 @@ window.KAIYANG_FOOD_MAP = {
    */
   posterPages: [
     {
-      image: "assets/images/pages/01.jpg",
-      hotspots: []
+      image: "assets/images/pages/01.jpg?v=0930b",
+      bgImage: "assets/images/pages/01-bg.jpg?v=0930b",
+      staticPieces: [],
+      titlePieces: [
+        { left: 6, top: 2.6, width: 88, height: 17.6, delay: 0 },
+        { left: 8, top: 17.0, width: 84, height: 13.4, delay: 0.18 },
+        { left: 6, top: 28.2, width: 88, height: 13.4, delay: 0.36 }
+      ],
+      dishPieces: [
+        { left: 17, top: 41.4, width: 22, height: 13.2, delay: 0.62, round: 1 },
+        { left: 45, top: 38.4, width: 38, height: 18.2, delay: 0.7, round: 1 },
+        { left: 32, top: 44.2, width: 18, height: 13.4, delay: 0.78, round: 1 },
+        { left: 23, top: 51.2, width: 18, height: 11.0, delay: 0.86, round: 1 },
+        { left: 51, top: 50.0, width: 16, height: 10.2, delay: 0.94, round: 1 },
+        { left: 62, top: 48.6, width: 17, height: 10.6, delay: 1.02, round: 1 },
+        { left: 73, top: 51.6, width: 21, height: 12.4, delay: 1.1, round: 1 },
+        { left: 54, top: 56.8, width: 17, height: 10.4, delay: 1.18, round: 1 },
+        { left: 65, top: 59.8, width: 21, height: 12.2, delay: 1.26, round: 1 },
+        { left: 1.8, top: 57.8, width: 24, height: 15.2, delay: 1.34, round: 1 },
+        { left: 11, top: 66.4, width: 20, height: 12.8, delay: 1.42, round: 1 },
+        { left: 13, top: 77.6, width: 26, height: 13.4, delay: 1.5, round: 1 },
+        { left: 31, top: 72.8, width: 34, height: 17.2, delay: 1.58, round: 1 },
+        { left: 57, top: 72.6, width: 30, height: 16.0, delay: 1.66, round: 1 },
+        { left: 5, top: 40.6, width: 16, height: 12.0, delay: 0.58, round: 1 },
+        { left: 78, top: 46.8, width: 20, height: 14.2, delay: 1.06, round: 1 },
+        { left: 70, top: 60.4, width: 22, height: 13.0, delay: 1.3, round: 1 }
+      ],
+      cardPieces: []
     },
     {
-      image: "assets/images/pages/02.jpg",
+      image: "assets/images/pages/02.jpg?v=0930b",
+      bgImage: "assets/images/pages/02-bg.jpg?v=0930b",
       hotspots: [
         { shopId: 1, left: 48, top: 33.2, width: 42, height: 7 },
         { shopId: 2, left: 7, top: 58.8, width: 40, height: 7 },
         { shopId: 3, left: 48, top: 86.2, width: 42, height: 7 }
+      ],
+      staticPieces: [],
+      titlePieces: [],
+      dishPieces: [],
+      cardPieces: [
+        { left: 4.2, top: 15.8, width: 91.6, height: 26.8, delay: 0.06 },
+        { left: 4.0, top: 41.6, width: 92.0, height: 27.8, delay: 0.38 },
+        { left: 4.0, top: 69.2, width: 92.0, height: 29.0, delay: 0.7 }
       ]
     },
     {
-      image: "assets/images/pages/03.jpg",
+      image: "assets/images/pages/03.jpg?v=0930b",
+      bgImage: "assets/images/pages/03-bg.jpg?v=0930b",
       hotspots: [
         { shopId: 4, left: 48, top: 31.2, width: 42, height: 7 },
         { shopId: 5, left: 7, top: 56.8, width: 40, height: 7 },
         { shopId: 6, left: 48, top: 84.2, width: 42, height: 7 }
+      ],
+      staticPieces: [],
+      titlePieces: [],
+      dishPieces: [],
+      cardPieces: [
+        { left: 4.0, top: 14.6, width: 92.0, height: 27.6, delay: 0.06 },
+        { left: 4.0, top: 41.4, width: 92.0, height: 27.8, delay: 0.38 },
+        { left: 4.0, top: 68.6, width: 92.0, height: 29.8, delay: 0.7 }
       ]
     },
     {
-      image: "assets/images/pages/04.jpg",
+      image: "assets/images/pages/04.jpg?v=0930b",
+      bgImage: "assets/images/pages/04-bg.jpg?v=0930b",
       hotspots: [
         { shopId: 7, left: 47, top: 26.2, width: 43, height: 7 },
         { shopId: 8, left: 7, top: 56.2, width: 40, height: 7.2 },
         { shopId: 9, left: 48, top: 86.8, width: 42, height: 7.5 }
+      ],
+      staticPieces: [],
+      titlePieces: [],
+      dishPieces: [],
+      cardPieces: [
+        { left: 4.0, top: 12.8, width: 92.0, height: 27.8, delay: 0.06 },
+        { left: 4.0, top: 39.6, width: 92.0, height: 28.6, delay: 0.38 },
+        { left: 4.0, top: 67.4, width: 92.0, height: 31.2, delay: 0.7 }
       ]
     },
     {
-      image: "assets/images/pages/05.jpg",
+      image: "assets/images/pages/05.jpg?v=0930b",
+      bgImage: "assets/images/pages/05-bg.jpg?v=0930b",
       hotspots: [
         { shopId: 10, left: 50, top: 26.5, width: 42, height: 7.5 },
         { shopId: 11, left: 50, top: 54.2, width: 42, height: 7.5 },
         { shopId: 12, left: 50, top: 83.5, width: 42, height: 7.5 }
+      ],
+      staticPieces: [],
+      titlePieces: [],
+      dishPieces: [],
+      cardPieces: [
+        { left: 3.2, top: 7.4, width: 93.6, height: 30.0, delay: 0.06 },
+        { left: 3.2, top: 36.2, width: 93.6, height: 30.6, delay: 0.38 },
+        { left: 3.2, top: 65.6, width: 93.6, height: 33.2, delay: 0.7 }
       ]
     },
     {
-      image: "assets/images/pages/06.jpg",
+      image: "assets/images/pages/06.jpg?v=0930b",
+      bgImage: "assets/images/pages/06-bg.jpg?v=0930b",
       hotspots: [
         { shopId: 13, left: 48, top: 28.5, width: 42, height: 7.2 },
         { shopId: 14, left: 7, top: 55.8, width: 40, height: 7.2 },
         { shopId: 15, left: 48, top: 83.5, width: 42, height: 7.2 }
+      ],
+      staticPieces: [],
+      titlePieces: [],
+      dishPieces: [],
+      cardPieces: [
+        { left: 4.0, top: 14.8, width: 92.0, height: 27.4, delay: 0.06 },
+        { left: 4.0, top: 41.0, width: 92.0, height: 28.0, delay: 0.38 },
+        { left: 4.0, top: 67.8, width: 92.0, height: 31.0, delay: 0.7 }
       ]
     },
     {
-      image: "assets/images/pages/07.jpg",
+      image: "assets/images/pages/07.jpg?v=0930b",
+      bgImage: "assets/images/pages/07-bg.jpg?v=0930b",
       hotspots: [
         { shopId: 16, left: 48, top: 28.2, width: 42, height: 7.2 },
         { shopId: 17, left: 7, top: 55.5, width: 40, height: 7.2 },
         { shopId: 18, left: 48, top: 83.2, width: 42, height: 7.2 }
+      ],
+      staticPieces: [],
+      titlePieces: [],
+      dishPieces: [],
+      cardPieces: [
+        { left: 4.0, top: 14.4, width: 92.0, height: 27.6, delay: 0.06 },
+        { left: 4.0, top: 40.8, width: 92.0, height: 28.2, delay: 0.38 },
+        { left: 4.0, top: 67.8, width: 92.0, height: 31.0, delay: 0.7 }
       ]
     }
   ]
